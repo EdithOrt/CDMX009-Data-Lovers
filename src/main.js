@@ -1,4 +1,4 @@
-import {dataPokemon, newList} from './data.js';
+import {dataPokemon, newList, orderNumberPokedexDescendent} from './data.js';
 
 //Nodos 
 let closeModal = document.querySelectorAll(".close");
@@ -52,7 +52,6 @@ printModal(modal);
 let options= document.querySelector(".dropdown-content");
 options.addEventListener('click', (e)=>{
    let value= e.target.value;
-   console.log(value)
    if(value != 'Todos los pokémones'){
     let dataFilter = newList(dataPokemon,value)
     contentImages.innerHTML = '';
